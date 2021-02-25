@@ -24,7 +24,7 @@ Everything in an HTML document needs to be wrapped in the `<html>` tag. The `<he
 </html>
 ```
 
-### Text Content Tags
+## Text Content Tags
 A lot of what a page consists of is text, and these are the most common text formatting tags.
 
 Headings go from 1-6 in decreasing order. Think of them as titles and subtitles used in textbooks.
@@ -37,7 +37,7 @@ Headings go from 1-6 in decreasing order. Think of them as titles and subtitles 
 <h6>Smallest</h1>
 ```
 
-### List Tags
+## List Tags
 HTML adds bullets and numbers to the lists automatically, you just need to use the proper tags. `<li>` stands for "list item" and is used in both unordered and ordered lists.
 ```html
 <!-- Unordered List (think bulleted list) -->
@@ -53,7 +53,7 @@ HTML adds bullets and numbers to the lists automatically, you just need to use t
 </ol>
 ```
 
-### Text Formatting Tags
+## Text Formatting Tags
 You can add text formatting via CSS, but sometimes you want that information to exist in the HTML document.
 ```html
 <b>Bold</b>
