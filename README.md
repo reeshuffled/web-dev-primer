@@ -36,7 +36,9 @@ A modern guide of the useful parts of HTML, CSS, and JS to get quickly started w
         4. [Arrow Function Expression](#arrow-function-expressions)
         5. [Uses for Arrow Functions](#uses-for-arrow-functions)
 6. [JavaScript-HTML Interaction](#javascript-html-interaction)
-7. [Credits](#credits)
+    1. [Getting References to HTML Elements](#getting-references-to-html-elements)
+    2. [Attaching Event Listeners to Elements](#attaching-event-listeners-to-elements)
+8. [Credits](#credits)
 
 # HTML
 Hypertext Markup Language or HTML, is as the name suggests, not a programming language, but a markup language. This means that you have a series of tags that you can use to wrap other tags or text to mark the text as certain entities. This is in turn interpreted by the browser to show the elements that you are used to (which are then styled by CSS which is covered later). Element tags consist of an open tag and a close tag, a close tag being the same as an open tag, but with a `/` before the tag name.
@@ -514,7 +516,44 @@ HTML is represented as a tree and is accessible to JavaScript via the DOM (Docum
 
 **Further Reading:** [MDN Article on DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
 
+## Getting References to HTML Elements
 All that you really need to know is that you can get a reference to an HTML element via JavaScript and then call functions on it like you would any other JavaScript object.
+
+```html
+<button id="myButton">Click me!</button>
+<p class="letter">A</p>
+<p class="letter">B</p>
+<p class="letter">C</p>
+```
+
+```js
+// you can get an element by id
+const button = document.getElementById("myButton");
+
+// you can get elements by class name (beware: returns an HTML collection not an array)
+const letters = document.getElementsByClassName("letter");
+```
+
+## Creating HTML Elements in JavaScript
+You can create HTML elements and add to them to the page via JavaScript which is very useful when you want to dynamically create elements to reflect data items, for example.
+
+```html
+<div id="container"></div>
+```
+
+```js
+const containerEl = document.getElementById("container");
+
+// put the tag name as a string for the createElement function
+const p = document.createElement("p");
+p.innerText = "Hello, World!";
+
+// the appendChild function will add it after the last thing within the parent element
+// the parent element is the element of which the appendChild function is being called on
+containerEl.appendChild(p);
+```
+
+## Attaching Event Listeners to Elements
 ```html
 <p id="numClicks">0</p>
 <button id="myButton">Click me!</button>
@@ -540,7 +579,8 @@ button.addEventListener("click", () => {
     numClicksEl.innerText = parseInt(numClicksEl.innerText, 10) + 1;
 });
 ```
-**Further Reading:** [Article on DOM Manipulation](https://www.hongkiat.com/blog/dom-manipulation-javascript-methods/)
+**Further Reading:** [W3Schools Article on DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
+
 
 # Credits
 Some code examples and explanations in the JavaScript section were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
