@@ -58,6 +58,35 @@ myArray.length; // = 3
 ```
 **Further Reading:** [MDN Article on the Array object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
+### Strings
+Strings kind of act like arrays in JavaScript, but they're not actually arrays.
+```js
+// Strings can be declared with single or double quotes (this only matters when you have one of these characters in between the two quotes and need to escape it)
+let myString = "Hello";
+let otherString = 'Hello';
+
+// Strings can be concatenated with + and += (you'll learn more about those operators below)
+
+// Strings have a .length property like arrays
+myString.length; // = 5
+
+// You can access characters at a particular index with the brackets like in arrays
+myString[1]; // = "e"
+
+// However, strings are immutable so you can't change anything with the brackets like in arrays
+myString[0]; = "J" // this does nothing
+```
+
+Template strings are a cool way to interpolate variables into your strings in a readable format.
+```js
+let favoriteNum = 5;
+
+// You use backticks and surround a JavaScript variable or expression in the ${} symbols
+let statement = `My favorite number is ${favoriteNum}!`;
+let otherStatement = `My favorite number is ${3 + 2}!`; // prints the same thing as above
+```
+**Further Reading:** [MDN Article on Template Strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
+
 ## Operators
 There are many types of operators in JavaScript, but we will only focus on three main ones, arithmetic operators, assignment operators, and comparison operators.
 
@@ -159,4 +188,5 @@ for (let num of arr) {
 	console.log(num);
 }
 ```
-**Further Reading**: [For vs. For-in vs. For-of vs. forEach](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)
+**Further Reading**: [For vs. For-in vs. For-of vs. forEach](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)  
+**Advanced Reading:** If you want to make an object iterable, you can use [Object.entries/values/keys()](https://javascript.info/keys-values-entries)
