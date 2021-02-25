@@ -1,5 +1,5 @@
 # web-dev-primer
-A modern guide of the useful parts of HTML, CSS, and JS to get quickly started with web development.
+A modern guide of the useful parts of HTML, CSS, and JS to get quickly started with web development. This guide assumes knowledge of at least one other programming language and some basic concepts of Computer Science.
 
 # JavaScript
 ## Declaring Variables
