@@ -1,5 +1,6 @@
 # web-dev-primer
 
+# JavaScript
 ## Declaring Variables
 In JavaScript, you can have a variable that changes value (mutable) or one that does not change value (immutable). For mutable variables, you use let and for immutable variables, you use const.
 ```js
@@ -88,8 +89,8 @@ myArray[1]; // = 45
 
 In JavaScript, arrays are mutable and of variable length.
 ```js
-myArray.push(5.0); // add as last element
-someVar = myArray.pop(); // Remove last element
+myArray.push(5.0); // Add as last element
+myArray.pop(); // Remove last element
 
 myArray.length; // = 3
 ```
