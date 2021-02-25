@@ -1,4 +1,5 @@
 # web-dev-primer
+A modern guide of the useful parts of HTML, CSS, and JS to get quickly started with web development.
 
 # JavaScript
 ## Declaring Variables
