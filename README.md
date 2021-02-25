@@ -20,20 +20,48 @@ myVariable = "blah"; // String
 myVariable = false; // Boolean
 myVariable = [1, 2, 3]; // Array
 ```
-
-A more advanced type of JavaScript variables are something called objects. Objects are instances of classes which contain properties and/or functions designated to make certain tasks easier and safer through co-locating data and data actions.
+### Objects
+A more advanced type of JavaScript variables are something called objects. They are just like "dictionaries" or "maps" in other languages: an unordered collection of key-value pairs.
 ```js
-const today = new Date();
+let myObj = { key1: "Hello", key2: "World" };
 ```
 
+You can get object attributes with the bracket or dot syntax.
+```js
+const myKey = "key1";
+
+// Bracket syntax (especially helpful when you have a variable containing the key name
+myObj["key1"]; // = "Hello"
+myObj[myKey]; // = "Hello"
+
+// ... or using the dot syntax, provided the key is a valid identifier.
+myObj.key2; // = "World"
+```
+### Arrays
 A special type of object in JavaScript is the array. Arrays are ordered lists of values, of any type.
 ```js
 let myArray = ["Hello", 45, true];
 ```
+Array elements can be accessed using the square-brackets syntax. Array indices start at zero in JavaScript.
+```js
+let myArray = ["Hello", 45, true];
+
+myArray[1]; // = 45
+```
+
+In JavaScript, arrays are mutable and of variable length.
+```js
+myArray.push(5.0); // Add as last element
+myArray.pop(); // Remove last element
+
+myArray.length; // = 3
+```
+**Further Reading:** [MDN Article on the Array object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ## Operators
 There are many types of operators in JavaScript, but we will only focus on three main ones, arithmetic operators, assignment operators, and comparison operators.
 
+### Arithmetic Operators
 The arithmetic operators look just like the ones you would use in your math class.
 ```js
 const four = 2 + 2; // Addition
@@ -42,6 +70,8 @@ const eight = 4 * 2; // Multiplication
 const three = 6 / 2; // Division
 const one = 5 % 2; // Modulus (Remainder)
 ```
+
+### Assignment Operators
 You have already seen the most basic assignment operator which is just the equals sign, but you can also combine the equals sign with an arithmetic operator to utilize different assignment operators that help save the amount of typing you have to do.
 ```js
 let count = 5;
@@ -59,6 +89,7 @@ count++;
 count--;
 ```
 
+### Comparison Operators
 Comparison operators are for comparing two values.
 ```js
 const num = 4;
@@ -79,20 +110,4 @@ num != 3 // = true
 2 <= 2; // = true
 2 >= 2; // = true
 ```
-
-## Array Operations
-Array elements can be accessed using the square-brackets syntax. Array indices start at zero in JavaScript.
-```js
-let myArray = ["Hello", 45, true];
-
-myArray[1]; // = 45
-```
-
-In JavaScript, arrays are mutable and of variable length.
-```js
-myArray.push(5.0); // Add as last element
-myArray.pop(); // Remove last element
-
-myArray.length; // = 3
-```
-**Further Reading:** [MDN Article on the Array object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+**Further Reading:** [MDN Article on Expressions and Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
