@@ -12,7 +12,8 @@ A modern guide of the useful parts of HTML, CSS, and JS to get quickly started w
 2. [CSS](#css)
     1. [CSS Selectors](#css-selectors)
     2. [CSS Properties](#css-properties)
-    3. [Responsive Design](#responsive-design)
+    3. [Inline Styling](#inline-styling)
+    4. [Responsive Design](#responsive-design)
 4. [JavaScript](#javascript)
     1. [Declaring Variables](#declaring-variables)
         1. [Objects](#objects)
@@ -154,7 +155,13 @@ In the example above, all `<p>` elements are selected by the CSS selector, and t
 ## CSS Properties
 There are too many CSS properties to go over in this guide, so Google is your friend.
 
-**Further Reading:** [MDN CSS Properties Reference(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+**Further Reading:** [MDN CSS Properties Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+
+## Inline Styling
+In HTML you can easily set CSS properties on individual elements, if you don't feel like using a stylesheet or if you just want to affect a specific element.
+```html
+<p style="color: white; background-color: black;">Hello, World!</p>
+```
 
 ## Responsive Design
 Nowadays everything has a web browswer, meaning that a website is viewed on all kinds of screen sizes, meaning that you have to make sure that your elements are sized properly so that it doesn't mess up on certain devices. Often times web developers rely on CSS frameworks to do a lot of the responsive design work.
@@ -385,7 +392,7 @@ printString(); // prints "Foo"
 Something cool that you can do in JavaScript is an Immediately Invoked Function Expression (IIFE). Essentially you define a function and call it at the same time.
 ```js
 // This function is also an anonymous function, it has no name
-// This function could not be called anyway because the parenthesis around the function create a closure
+// This function could not be called anyway because the parenthesis around the function that create a closure
 (function() {
     console.log("Hello, World!");
 })();
