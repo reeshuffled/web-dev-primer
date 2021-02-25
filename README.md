@@ -65,6 +65,41 @@ You can add text formatting via CSS, but sometimes you want that information to 
 ```
 **Further Reading:** [W3Schools Article on HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp)
 
+## Tables
+To make a table, wrap everything in a `<table>` tag first and foremost. Then each row should be in a `<tr>` "table row" tag. Table headers should be in `<th>` "table header" tags and other table cells should be in `<td>` "table data" tags.
+```html
+<table>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    
+    <tr>
+        <td>Tom</td>
+        <td>Hanks</td>
+    </tr>
+    
+    <tr>
+        <td>Margot</td>
+        <td>Robbie</td>
+    </tr>
+</table>
+```
+**Further Reading:** [MDN Article on Tables](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics)
+
+## Forms
+Forms are an important part of web development because it allows us to collect data from the user in a structured way and send it to a server (if necessary).
+```html
+<form>
+    <input type="text">Name</input>
+    <input type="number">Age</input>
+
+    <button type="submit">Submit Data</button>
+</form>
+```
+**Further Reading:** [MDN Article on Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form)  
+**Further Reading:** [W3Schools Article on HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+
 # JavaScript
 ## Declaring Variables
 In JavaScript, you can have a variable that changes value (mutable) or one that does not change value (immutable). For mutable variables, you use let and for immutable variables, you use const.
