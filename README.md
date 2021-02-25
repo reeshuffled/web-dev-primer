@@ -11,9 +11,12 @@ A modern guide of the useful parts of HTML, CSS, and JS to get quickly started w
     6. [Forms](#forms)
 2. [CSS](#css)
     1. [CSS Selectors](#css-selectors)
-    2. [CSS Properties](#css-properties)
-    3. [Inline Styling](#inline-styling)
-    4. [Responsive Design](#responsive-design)
+        1. [Element](#element)
+        2. [ID](#id)
+        3. [Class](#class)
+    3. [CSS Properties](#css-properties)
+    4. [Inline Styling](#inline-styling)
+    5. [Responsive Design](#responsive-design)
 4. [JavaScript](#javascript)
     1. [Declaring Variables](#declaring-variables)
         1. [Objects](#objects)
@@ -148,9 +151,54 @@ p {
 ```
 
 ## CSS Selectors
-In the example above, all `<p>` elements are selected by the CSS selector, and the properties that are being modified are the text color and the background color.
+In the example above, all `<p>` elements are selected by the CSS selector, and the properties that are being modified are the text color and the background color. The most common CSS selectors are by element, id, and class.
 
 **Further Reading:** [W3Schools Article on CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+### Element
+When selecting by element, you just have the element/tag name as the selector.
+```html
+<ul>
+    <li>Pencil</li>
+    <li>Pen</li>
+    <li>Books</li>
+</ul>
+```
+
+```css
+li {
+    color: red;
+    font-size: 20px;
+}
+```
+
+### ID
+An ID is something that you can give an HTML element that _must_ be unique (i.e. only one element can have a certain ID).
+```html
+<p id="myParagraph">This is a paragraph.</p>
+```
+
+When selecting by ID in CSS, you use the `#` before the ID.
+```css
+#myParagraph {
+    background-color: yellow;
+}
+```
+
+### Class
+A class is in contrast to ID where many elements can be under a class. A class is essentially a set of elements (they don't have to be the same tag type) that you want to be styled the same.
+```html
+<b class="text">Jeans</b>
+<i class="text">Shorts</i>
+```
+
+When selecting by class in CSS, you put a `.` before the class name.
+```css
+.text {
+    font-size: 12px;
+    color: blue;
+}
+```
 
 ## CSS Properties
 There are too many CSS properties to go over in this guide, so Google is your friend.
