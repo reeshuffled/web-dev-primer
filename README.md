@@ -61,7 +61,8 @@ myArray.length; // = 3
 ### Strings
 Strings kind of act like arrays in JavaScript, but they're not actually arrays.
 ```js
-// Strings can be declared with single or double quotes (this only matters when you have one of these characters in between the two quotes and need to escape it)
+// Strings can be declared with single or double quotes 
+// (this only matters when you have one of these characters in between the two quotes and need to escape it)
 let myString = "Hello";
 let otherString = 'Hello';
 
@@ -167,7 +168,7 @@ while (true){
 // Do-while loops are like while loops, except they always run at least once.
 let input;
 do {
-	input = prompt("What is your name?");
+    input = prompt("What is your name?");
 } while (input != "");
 
 // The for loop follows a familiar format:
@@ -179,17 +180,43 @@ for (let i = 0; i < 3; i++){
 // The for-in loop allows for the iteration of properties (keys) of an object
 const myObj = { key1: "Hello", key2: "World" };
 for (let key in myObj) {
-	console.log(myObj[key]); // would print every value in the object
+    console.log(myObj[key]); // would print every value in the object
 }
 
 // The for-of loop allows for the iteration over an iterable object (like an Array or String)
 const arr = [1, 2, 3, 4];
 for (let num of arr) {
-	console.log(num);
+    console.log(num);
 }
 ```
 **Further Reading**: [For vs. For-in vs. For-of vs. forEach](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)  
 **Advanced Reading:** If you want to make an object iterable, you can use [Object.entries/values/keys()](https://javascript.info/keys-values-entries)
+
+## Functions
+You define functions in JavaScript with the `function` keyword and you invoke functions with `()` just like in most other languages. If you need to return a value, the `return` keyword is used. Since this is a dynamically typed language, you don't need to declare parameter or return types.
+```js
+function myFunction() {
+    console.log("Hello, World!");
+}
+
+myFunction();
+
+// Function with parameters
+function addTwoNumbers(numOne, numTwo) {
+    return numOne + numTwo;
+}
+```
+
+You can also set default parameters in JavaScript.
+```js
+function printString(str="Foo") {
+    console.log(str);
+}
+
+printString("Hello") // prints "Hello"
+printString(); // prints "Foo"
+```
+**Further Reading:** [MDN Article on Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
 ## Credits
 Many code examples and explanations were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
