@@ -111,3 +111,52 @@ num != 3 // = true
 2 >= 2; // = true
 ```
 **Further Reading:** [MDN Article on Expressions and Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+## Conditionals
+If, else-if, and else statements are just as you'd find them in any other C-style language.
+```js
+let count = 1;
+if (count == 2){
+    // evaluated if count is 2
+} 
+else if (count == 3){
+    // evaluated if count is 3
+} 
+else {
+    // evaluated if it's neither 2 nor 3
+}
+```
+**Advanced Reading**: [MDN Article on the Ternary Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
+
+## Loops
+While, do-while, and for loops are just as you'd find them in other C-style languages as well.
+```js
+while (true){
+    // An infinite loop!
+}
+
+// Do-while loops are like while loops, except they always run at least once.
+let input;
+do {
+    input = prompt("What is your name?");
+} while (input != "");
+
+// The for loop follows a familiar format:
+// initialization; continue condition; iteration
+for (let i = 0; i < 3; i++){
+    // will run 3 times
+}
+
+// The for-in loop allows for the iteration of properties (keys) of an object
+const myObj = { key1: "Hello", key2: "World" };
+for (let key in myObj) {
+  console.log(myObj[key]); // would print every value in the object
+}
+
+// The for-of loop allows for the iteration over an iterable object (like an Array or String)
+const arr = [1, 2, 3, 4];
+for (let num of arr) {
+	console.log(num);
+}
+```
+**Further Reading**: [For vs. For-in vs. For-of vs. forEach](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)
