@@ -9,6 +9,7 @@ A modern guide of the useful parts of HTML, CSS, and JS to get quickly started w
     4. [Text Formatting Tags](#text-formatting-tags)
     5. [Tables](#tables)
     6. [Forms](#forms)
+    7. [Divs](#divs)
 2. [CSS](#css)
     1. [CSS Selectors](#css-selectors)
         1. [Element](#element)
@@ -35,9 +36,12 @@ A modern guide of the useful parts of HTML, CSS, and JS to get quickly started w
         3. [Passing Functions as Arguments](#passing-functions-as-arguments)
         4. [Arrow Function Expression](#arrow-function-expressions)
         5. [Uses for Arrow Functions](#uses-for-arrow-functions)
+    6. [Asynchronous Programming](#asynchronous-programming)
+        1. [Fetch](#fetch)
 6. [JavaScript-HTML Interaction](#javascript-html-interaction)
     1. [Getting References to HTML Elements](#getting-references-to-html-elements)
     2. [Attaching Event Listeners to Elements](#attaching-event-listeners-to-elements)
+    3. [Creating HTML Elements in JavaScript](#creating-html-elements-in-javascript)
 8. [Credits](#credits)
 
 # HTML
@@ -138,6 +142,25 @@ Forms are an important part of web development because it allows us to collect d
 ```
 **Further Reading:** [MDN Article on Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form)  
 **Further Reading:** [W3Schools Article on HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+
+## Divs
+Divs are divisions of content within an HTML document that are most commonly used as containers for other elements.
+
+```html
+<div>
+    <p>This is a piece of text.</p>
+    
+    <p>This is some related piece of text.</p>
+    
+    <ul>
+        <li>Also, we have a list.</li>
+        <li>Divs are very useful.</li>
+    </ul>
+</div>
+```
+
+Divs are a catch-all, but sometimes you want to use more specific elements, especially for accesibility reasons.
+**Further Reading:** [W3Schools Article on Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
 
 # CSS
 Cascading Stylesheets or CSS, is a way to style your HTML. A stylesheet is a set of one or more CSS rules. A CSS rule consists of a selector (what the rule is applied to) and a set of CSS properties (what is applied to the selected elements).
@@ -510,6 +533,35 @@ const evens = arr.filter(num => num % 2 == 0); // returns [2, 4]
 const sum = arr.reduce((acc, num) => acc + num); // returns 15
 ```
 **Further Reading:** [Map, Filter, and Reduce](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
+
+## Asynchronous Programming
+In JavaScript, sometimes things take a long time to complete, so they work in the background and then can alert a function when they're done. Asynchronous programming is done in JavaScript with something called Promises.
+
+### Fetch
+`fetch` is one of the nicer APIs that browsers allow you to use, which allows you to make web requests in JavaScript.
+
+`fetch` returns a Promise object, and we can handle that in one of two different ways.
+
+The first way is to use `then` functions, which are called on Promises, and return Promises as well (this allows for `then` chaining).
+```js
+// `then` functions are called when the Promise is resolved (complete)
+// response.json() returns a Promise which is returned via the `then` function
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then(response => response.json())
+    .then(data => console.log(data))
+```
+
+The other way is to use the `await` keyword, which can only be used in functions that are designated as `async`.
+```js
+(async function() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const data = await response.json();
+})();
+```
+
+There is a time and place for both ways, but often times it's just a matter of personal preference.
+
+**Further Reading:** [MDN Article on Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 
 # JavaScript-HTML Interaction
 HTML is represented as a tree and is accessible to JavaScript via the DOM (Document Object Model) API.
