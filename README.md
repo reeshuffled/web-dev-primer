@@ -1,6 +1,70 @@
 # web-dev-primer
 A modern guide of the useful parts of HTML, CSS, and JS to get quickly started with web development. This guide assumes knowledge of at least one other programming language and some basic concepts of Computer Science.
 
+# HTML
+Hypertext Markup Language or HTML, is as the name suggests, not a programming language, but a markup language. This means that you have a series of tags that you can use to wrap other tags or text to mark the text as certain entities. This is in turn interpreted by the browser to show the elements that you are used to (which are then styled by CSS which is covered later). Element tags consist of an open tag and a close tag, a close tag being the same as an open tag, but with a `/` before the tag name.
+
+## Structure of an HTML Document
+Everything in an HTML document needs to be wrapped in the `<html>` tag. The `<head>` tag is used for things that are not visible, like information about the page that is useful to the browser, but that is not visualized. This includes stylesheet imports, title, metadata, and other things of that nature. The `<body>` tag is where the meat of the page is, all the things that are seen by the user. Make sure the `<head>` on top of the `<body>` just like in humans.
+
+```html
+<html>
+    <head>
+        <title>My First Page</title>
+    </head>
+    
+    <!-- This is a comment -->
+    <body>
+        <h1>My First Page</h1>
+        <p>This is my first page.</p>
+        
+        <h2>A secondary header.</h2>
+        <p>Some more text.</p>
+    </body>
+</html>
+```
+
+### Text Content Tags
+A lot of what a page consists of is text, and these are the most common text formatting tags.
+
+Headings go from 1-6 in decreasing order. Think of them as titles and subtitles used in textbooks.
+```html
+<h1>Largest</h1>
+<h2>Second Largest</h1>
+<h3>Third Largest</h1>
+<h4>Third Smallest</h1>
+<h5>Second Smallest</h1>
+<h6>Smallest</h1>
+```
+
+### List Tags
+HTML adds bullets and numbers to the lists automatically, you just need to use the proper tags. `<li>` stands for "list item" and is used in both unordered and ordered lists.
+```html
+<!-- Unordered List (think bulleted list) -->
+<ul>
+    <li>Bacon</li>
+    <li>Eggs</li>
+</ul>
+
+<!-- Ordered list (think numbered list) -->
+<ol>
+    <li>Wake up</li>
+    <li>Brush teeth</li>
+</ol>
+```
+
+### Text Formatting Tags
+You can add text formatting via CSS, but sometimes you want that information to exist in the HTML document.
+```html
+<b>Bold</b>
+<i>Italics</i>
+<u>Underlined</i>
+
+<sup>Superscript</sup>
+<sub>Subscript</sub>
+```
+**Further Reading:** [W3Schools Article on HTML Text Formatting](https://www.w3schools.com/html/html_formatting.asp)
+
 # JavaScript
 ## Declaring Variables
 In JavaScript, you can have a variable that changes value (mutable) or one that does not change value (immutable). For mutable variables, you use let and for immutable variables, you use const.
