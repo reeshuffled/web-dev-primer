@@ -218,5 +218,57 @@ printString(); // prints "Foo"
 ```
 **Further Reading:** [MDN Article on Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
+Something cool that you can do in JavaScript is an Immediately Invoked Function Expression (IIFE). Essentially you define a function and call it at the same time.
+```js
+// This function is also an anonymous function, it has no name
+// This function could not be called anyway because the parenthesis around the function create a closure
+(function() {
+    console.log("Hello, World!");
+})();
+```
+**Further Reading:** [MDN Article on IIFE](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)  
+**Further Reading:** [MDN Article section on Anonymous Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#the_function_expression_function_expression)  
+**Further Reading:** [MDN Article on Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+
+You can pass functions as arguments to other functions, which becomes useful in many cases.
+```js
+// prints "Hello" every five seconds"
+setInterval(function() {
+    console.log("Hello");
+}, 5000);
+
+// waits 3 seconds, then prints "World"
+setTimeout(function() {
+    console.log("World");
+}, 3000);
+```
+**Further Reading:** [W3Schools Article on Timing Event](https://www.w3schools.com/js/js_timing.asp)
+
+There is another way to create functions, which are called arrow functions. These are a special type of functions that don't bind to `this` which means they can't be used in all situations. They are always anonymous, but can be assigned to a variable and can be used like any other function.
+```js
+// Much more compact!
+setTimeout(() => {
+    console.log("World");
+}, 3000);
+
+// Parameters are in the same format you would expect in another function expression
+const addTwoNumbers = (numOne, numTwo) => {
+    return numOne + numTwo;
+};
+
+addTwoNumbers(3, 4); // returns 7
+
+// One line arrow functions can omit the brackets
+const printString = (str) => console.log(str);
+
+printString("Hello"); // prints "Hello"
+
+// If an arrow function is one line and returning something, the return keyword is not necessary
+const addTwo = (num) => num + 2;
+
+addTwo(2); // returns 4
+```
+**Further Reading:** [MDN Article on Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
 ## Credits
 Many code examples and explanations were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
