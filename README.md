@@ -236,6 +236,25 @@ In HTML you can easily set CSS properties on individual elements, if you don't f
 <p style="color: white; background-color: black;">Hello, World!</p>
 ```
 
+The alternative to inline styling is either embedding a stylesheet, or importing an external stylesheet.
+```html
+<html>
+    <head>
+        <title>Example Page</title>
+        
+        <link rel="stylesheet" href="path/to/file">
+        <style>
+            h1 {
+                color: red;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Example Page</h1>
+    </body>
+```
+
 ## Responsive Design
 Nowadays everything has a web browswer, meaning that a website is viewed on all kinds of screen sizes, meaning that you have to make sure that your elements are sized properly so that it doesn't mess up on certain devices. Often times web developers rely on CSS frameworks to do a lot of the responsive design work.
 
@@ -567,6 +586,24 @@ There is a time and place for both ways, but often times it's just a matter of p
 HTML is represented as a tree and is accessible to JavaScript via the DOM (Document Object Model) API.
 
 **Further Reading:** [MDN Article on DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
+
+JavaScript can be embedded in an HTML document, or imported as an external file.
+```html
+<html>
+    <head>
+        <title>Example Page</title>
+    </head>
+    
+    <body>
+        <h1>Example Page</h1>
+        
+        <script>
+            console.log("Hello, World!");
+        </script>
+        
+        <script src="path/to/file"></script>
+    </body>
+```
 
 ## Getting References to HTML Elements
 All that you really need to know is that you can get a reference to an HTML element via JavaScript and then call functions on it like you would any other JavaScript object.
