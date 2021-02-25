@@ -167,7 +167,7 @@ while (true){
 // Do-while loops are like while loops, except they always run at least once.
 let input;
 do {
-    input = prompt("What is your name?");
+	input = prompt("What is your name?");
 } while (input != "");
 
 // The for loop follows a familiar format:
@@ -179,7 +179,7 @@ for (let i = 0; i < 3; i++){
 // The for-in loop allows for the iteration of properties (keys) of an object
 const myObj = { key1: "Hello", key2: "World" };
 for (let key in myObj) {
-  console.log(myObj[key]); // would print every value in the object
+	console.log(myObj[key]); // would print every value in the object
 }
 
 // The for-of loop allows for the iteration over an iterable object (like an Array or String)
@@ -190,3 +190,6 @@ for (let num of arr) {
 ```
 **Further Reading**: [For vs. For-in vs. For-of vs. forEach](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript)  
 **Advanced Reading:** If you want to make an object iterable, you can use [Object.entries/values/keys()](https://javascript.info/keys-values-entries)
+
+## Credits
+Many code examples and explanations were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
