@@ -1,6 +1,35 @@
 # web-dev-primer
 A modern guide of the useful parts of HTML, CSS, and JS to get quickly started with web development. This guide assumes knowledge of at least one other programming language and some basic concepts of Computer Science.
 
+# Table of Contents
+1. [HTML](#html)
+    1. [Structure of an HTML Document](#structure-of-an-html-document)
+    2. [Text Content Tags](#text-content-tags)
+2. [CSS](#css)
+    1. [CSS Selectors](#css-selectors)
+    2. [CSS Properties](#css-properties)
+    3. [Responsive Design](#responsive-design)
+4. [JavaScript](#javascript)
+    1. [Declaring Variables](#declaring-variables)
+        1. [Objects](#objects)
+        2. [Arrays](#arrays)
+        3. [Strings](#strings)
+        4. [Template Strings](#template-strings)
+    2. [Operators](#operators)
+        1. [Arithmetic Operators](#arithmetic-operators)
+        2. [Assigment Operators](#assignment-operators)
+        3. [Comparison Operators](#comparison-operators)
+    3. [Conditionals](#conditionals)
+    4. [Loops](#loops)
+    5. [Functions](#functions)
+        1. [Default Parameters](#default-parameters)
+        2. [Immediately Invoked Function Expressions](#immediately-invoked-function-expressions)
+        3. [Passing Functions as Arguments](#passing-functions-as-arguments)
+        4. [Arrow Function Expression](#arrow-function-expressions)
+        5. [Uses for Arrow Functions](#uses-for-arrow-functions)
+6. [JavaScript-HTML Interaction](#javascript-html-interaction)
+7. [Credits](#credits)
+
 # HTML
 Hypertext Markup Language or HTML, is as the name suggests, not a programming language, but a markup language. This means that you have a series of tags that you can use to wrap other tags or text to mark the text as certain entities. This is in turn interpreted by the browser to show the elements that you are used to (which are then styled by CSS which is covered later). Element tags consist of an open tag and a close tag, a close tag being the same as an open tag, but with a `/` before the tag name.
 
@@ -99,6 +128,35 @@ Forms are an important part of web development because it allows us to collect d
 ```
 **Further Reading:** [MDN Article on Forms](https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form)  
 **Further Reading:** [W3Schools Article on HTML Input Types](https://www.w3schools.com/html/html_form_input_types.asp)
+
+# CSS
+Cascading Stylesheets or CSS, is a way to style your HTML. A stylesheet is a set of one or more CSS rules. A CSS rule consists of a selector (what the rule is applied to) and a set of CSS properties (what is applied to the selected elements).
+```html
+<p>This is some text</p>
+```
+
+```css
+p {
+    color: white;
+    background-color: red;
+}
+```
+
+## CSS Selectors
+In the example above, all `<p>` elements are selected by the CSS selector, and the properties that are being modified are the text color and the background color.
+
+**Further Reading:** [W3Schools Article on CSS Selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+## CSS Properties
+There are too many CSS properties to go over in this guide, so Google is your friend.
+
+**Further Reading:** [MDN CSS Properties Reference(https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Properties_Reference)
+
+## Responsive Design
+Nowadays everything has a web browswer, meaning that a website is viewed on all kinds of screen sizes, meaning that you have to make sure that your elements are sized properly so that it doesn't mess up on certain devices. Often times web developers rely on CSS frameworks to do a lot of the responsive design work.
+
+**Further Reading:** [MDN Article on Responsive Design](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)  
+**Further Reading:** [Bootstrap CSS Framework](https://getbootstrap.com/)
 
 # JavaScript
 ## Declaring Variables
