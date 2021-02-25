@@ -78,6 +78,7 @@ myString[1]; // = "e"
 myString[0]; = "J" // this does nothing
 ```
 
+### Template Strings
 Template strings are a cool way to interpolate variables into your strings in a readable format.
 ```js
 let favoriteNum = 5;
@@ -207,6 +208,7 @@ function addTwoNumbers(numOne, numTwo) {
 }
 ```
 
+### Default Parameters
 You can also set default parameters in JavaScript.
 ```js
 function printString(str="Foo") {
@@ -218,6 +220,7 @@ printString(); // prints "Foo"
 ```
 **Further Reading:** [MDN Article on Default Parameters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)
 
+### Immediately Invoked Function Expressions
 Something cool that you can do in JavaScript is an Immediately Invoked Function Expression (IIFE). Essentially you define a function and call it at the same time.
 ```js
 // This function is also an anonymous function, it has no name
@@ -230,6 +233,7 @@ Something cool that you can do in JavaScript is an Immediately Invoked Function 
 **Further Reading:** [MDN Article section on Anonymous Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#the_function_expression_function_expression)  
 **Further Reading:** [MDN Article on Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 
+### Passing Functions as Arguments
 You can pass functions as arguments to other functions, which becomes useful in many cases.
 ```js
 // prints "Hello" every five seconds"
@@ -244,6 +248,7 @@ setTimeout(function() {
 ```
 **Further Reading:** [W3Schools Article on Timing Event](https://www.w3schools.com/js/js_timing.asp)
 
+### Arrow Function Expressions
 There is another way to create functions, which are called arrow functions. These are a special type of functions that don't bind to `this` which means they can't be used in all situations. They are always anonymous, but can be assigned to a variable and can be used like any other function.
 ```js
 // Much more compact!
@@ -269,6 +274,24 @@ const addTwo = (num) => num + 2;
 addTwo(2); // returns 4
 ```
 **Further Reading:** [MDN Article on Arrow function expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+### Uses for Arrow Functions
+Arrow functions are predominately used with functions associated with "functional programming" so `map`, `filter`, and `reduce`.
+```js
+const arr = [1, 2, 3, 4, 5];
+
+// map applies a function to each value in the array and then returns a new array
+const doubled = arr.map(num => num * 2); // returns [2, 4, 6, 8, 10]
+
+// filter applies a function to each value in the array and keeps the values where
+// the function returns true
+const evens = arr.filter(num => num % 2 == 0); // returns [2, 4]
+
+// reduce applies a function to each value and keeps an "accumulator" variable which it
+// returns at the end
+const sum = arr.reduce((acc, num) => acc + num); // returns 15
+```
+**Further Reading:** [Map, Filter, and Reduce](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
 
 ## Credits
 Many code examples and explanations were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
