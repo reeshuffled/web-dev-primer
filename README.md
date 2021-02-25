@@ -293,5 +293,38 @@ const sum = arr.reduce((acc, num) => acc + num); // returns 15
 ```
 **Further Reading:** [Map, Filter, and Reduce](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d)
 
-## Credits
-Many code examples and explanations were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
+# JavaScript-HTML Interaction
+HTML is represented as a tree and is accessible to JavaScript via the DOM (Document Object Model) API.
+
+**Further Reading:** [MDN Article on DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core)
+
+All that you really need to know is that you can get a reference to an HTML element via JavaScript and then call functions on it like you would any other JavaScript object.
+```html
+<p id="numClicks">0</p>
+<button id="myButton">Click me!</button>
+```
+
+```js
+// get the element with the id "myButton" and store in the variable
+const button = document.getElementById("myButton");
+
+const numClicksEl = document.getElementById("numClicks");
+
+// whenever the button is clicked by the user in the browser,
+// the onclick function is called, and we just bound a function to it
+button.onclick = () => {
+    // + will work as concatentation with a string, so we need to convert to a number
+    numClicksEl.innerText = parseInt(numClicksEl.innerText, 10) + 1;
+}
+
+// this would have the same effect as the code above, but usually .onclick is cleaner
+// to write
+button.addEventListener("click", () => {
+    // + will work as concatentation with a string, so we need to convert to a number
+    numClicksEl.innerText = parseInt(numClicksEl.innerText, 10) + 1;
+});
+```
+**Further Reading:** [Article on DOM Manipulation](https://www.hongkiat.com/blog/dom-manipulation-javascript-methods/)
+
+# Credits
+Some code examples and explanations in the JavaScript section were taken and modified from [Learn JavaScript in Y minutes](https://learnxinyminutes.com/docs/javascript/), except they were updated to use a more modern form of JavaScript (ES6).
