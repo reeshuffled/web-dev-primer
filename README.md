@@ -29,8 +29,8 @@ A special type of object in JavaScript is the array. Arrays are ordered lists of
 let myArray = ["Hello", 45, true];
 ```
 
-## Numeric Operators
-There are many types of operators in JavaScript, but we will only focus on two main ones, arithmetic operators and assignment operators.
+## Operators
+There are many types of operators in JavaScript, but we will only focus on three main ones, arithmetic operators, assignment operators, and comparison operators.
 
 The arithmetic operators look just like the ones you would use in your math class.
 ```js
@@ -57,6 +57,27 @@ count++;
 count--;
 ```
 
+Comparison operators are for comparing two values.
+```js
+const num = 4;
+
+// Equality is ==
+1 == 1; // = true
+2 == 1; // = false
+num == 3 // = false
+
+// Inequality is !=
+1 != 1; // = false
+2 != 1; // = true
+num != 3 // = true
+
+// More comparisons
+1 < 10; // = true
+1 > 10; // = false
+2 <= 2; // = true
+2 >= 2; // = true
+```
+
 ## Array Operations
 Array elements can be accessed using the square-brackets syntax. Array indices start at zero in JavaScript.
 ```js
@@ -72,3 +93,4 @@ someVar = myArray.pop(); // Remove last element
 
 myArray.length; // = 3
 ```
+**Further Reading:** [MDN Article on the Array object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
