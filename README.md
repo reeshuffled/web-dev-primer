@@ -327,9 +327,11 @@ let myString = "Hello";
 let otherString = 'Hello';
 
 // Strings can be concatenated with + and += (you'll learn more about those operators below)
+myString += ", World!";
+otherString = otherString + ", World!";
 
 // Strings have a .length property like arrays
-myString.length; // = 5
+myString.length; // = 13
 
 // You can access characters at a particular index with the brackets like in arrays
 myString[1]; // = "e"
